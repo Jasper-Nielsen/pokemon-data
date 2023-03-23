@@ -27,12 +27,12 @@ const abra = {
   statsSpeed: 6,
 };
 
-console.log(JSON.stringify(abra));
+// console.log(JSON.stringify(abra)); prints JSON formatted data on abra to be inserted in pokemon.JSON
 
 
 async function initApp() {
 
-  addPokemonToList(abra);
+  const abra = addPokemonToList(abra);
   displayPokemonInGrid(abra);
 }
 
