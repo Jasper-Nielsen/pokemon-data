@@ -29,14 +29,13 @@ const abra = {
 
 // console.log(JSON.stringify(abra)); prints JSON formatted data on abra to be inserted in pokemon.JSON
 
-
 async function initApp() {
-
-  const abra = addPokemonToList(abra);
+  const abra = await getPokemon("https://raw.githubusercontent.com/Jasper-Nielsen/pokemon-data/main/pokemon.JSON?token=GHSAT0AAAAAAB62EETURSS2G63EVORYRMTIZA4C4VQ");
+  addPokemonToList(abra);
   displayPokemonInGrid(abra);
 }
 
-async function getPokemon(url){
+async function getPokemon(url) {
   const response = await fetch(url);
   const data = await response.json();
   return data;
