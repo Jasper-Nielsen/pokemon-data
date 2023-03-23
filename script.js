@@ -2,8 +2,6 @@
 
 window.addEventListener("load", initApp);
 
-const pokemon = document.querySelector(".pokemon");
-const list = document.querySelector(".list");
 const abra = {
   name: "Abra",
   description:
@@ -21,24 +19,47 @@ const abra = {
   generation: 1,
   spilversion: "1",
   canEvolve: true,
-  statsHP: 25,
-  statsAttack: 20,
-  statsDefense: 15,
-  statsSpecialAttack: 105,
-  statsSpecialDefense: 55,
-  statsSpeed: 90,
+  statsHP: 2,
+  statsAttack: 2,
+  statsDefense: 1,
+  statsSpecialAttack: 7,
+  statsSpecialDefense: 4,
+  statsSpeed: 6,
 };
 
-function initApp() {
+console.log(JSON.stringify(abra));
+
+
+async function initApp() {
+
   addPokemonToList(abra);
+  displayPokemonInGrid(abra);
+}
+
+async function getPokemon(url){
+  const response = await fetch(url);
+  const data = await response.json();
+  return data;
+}
+
+function displayPokemonInGrid(pokemon) {
+  document.querySelector("#pokemon-grid").insertAdjacentHTML(
+    "beforeend",
+    /*html*/ ` <article class="grid-item">
+                <img src="${pokemon.image}">
+                <h2>${pokemon.name}</h2>
+                
+            </article>
+`
+  );
 }
 
 function addPokemonToList(pokemon) {
   const html = /*html*/ `
+    <img src=${pokemon.image}> 
     <li>Name: ${pokemon.name}</li>
     <li>Description: ${pokemon.description}</li>
     <li>Ability: ${pokemon.ability}</li>
-     <img src=${pokemon.image}> 
     <li> <img src=${pokemon.footprint}> </li>
     <li>Dexindex: ${pokemon.dexindex}</li>
     <li>Type: ${pokemon.type}</li>
@@ -58,5 +79,7 @@ function addPokemonToList(pokemon) {
     <li>Speed: ${pokemon.statsSpeed}</li>
     `;
 
-  list.insertAdjacentHTML("beforeend", html);
+  document
+    .querySelector("#dialog-window")
+    .insertAdjacentHTML("beforeend", html);
 }
