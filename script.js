@@ -2,35 +2,37 @@
 
 window.addEventListener("load", initApp);
 
-const abra = {
-  name: "Abra",
-  description:
-    "Abra can teleport in its sleep. Apparently the more deeply Abra sleeps, the farther its teleportations go. ",
-  ability: "Teleport",
-  image: `https://assets.pokemon.com/assets/cms2/img/pokedex/full/063.png`,
-  footprint: `https://archives.bulbagarden.net/media/upload/9/9a/F0063.png`,
-  dexindex: 63,
-  type: "Psychic",
-  subType: "Undefined",
-  weakness: "Ghost, Dark, Bug",
-  gender: "male",
-  weight: 19.5,
-  height: 0.9,
-  generation: 1,
-  spilversion: "1",
-  canEvolve: true,
-  statsHP: 2,
-  statsAttack: 2,
-  statsDefense: 1,
-  statsSpecialAttack: 7,
-  statsSpecialDefense: 4,
-  statsSpeed: 6,
-};
+// const abra = {
+//   name: "Abra",
+//   description:
+//     "Abra can teleport in its sleep. Apparently the more deeply Abra sleeps, the farther its teleportations go. ",
+//   ability: "Teleport",
+//   image: `https://assets.pokemon.com/assets/cms2/img/pokedex/full/063.png`,
+//   footprint: `https://archives.bulbagarden.net/media/upload/9/9a/F0063.png`,
+//   dexindex: 63,
+//   type: "Psychic",
+//   subType: "Undefined",
+//   weakness: "Ghost, Dark, Bug",
+//   gender: "male",
+//   weight: 19.5,
+//   height: 0.9,
+//   generation: 1,
+//   spilversion: "1",
+//   canEvolve: true,
+//   statsHP: 2,
+//   statsAttack: 2,
+//   statsDefense: 1,
+//   statsSpecialAttack: 7,
+//   statsSpecialDefense: 4,
+//   statsSpeed: 6,
+// };
 
 // console.log(JSON.stringify(abra)); prints JSON formatted data on abra to be inserted in pokemon.JSON
 
 async function initApp() {
-  const abra = await getPokemon("https://raw.githubusercontent.com/Jasper-Nielsen/pokemon-data/main/pokemon.JSON?token=GHSAT0AAAAAAB62EETURSS2G63EVORYRMTIZA4C4VQ");
+  const abra = await getPokemon(
+    "https://raw.githubusercontent.com/Jasper-Nielsen/pokemon-data/main/pokemon.JSON"
+  );
   addPokemonToList(abra);
   displayPokemonInGrid(abra);
 }
@@ -38,6 +40,7 @@ async function initApp() {
 async function getPokemon(url) {
   const response = await fetch(url);
   const data = await response.json();
+  console.log(data);
   return data;
 }
 
@@ -51,6 +54,9 @@ function displayPokemonInGrid(pokemon) {
             </article>
 `
   );
+  document
+    .querySelector("#pokemon-grid article:last-child")
+    .addEventListener("click", addPokemonToList);
 }
 
 function addPokemonToList(pokemon) {
@@ -81,4 +87,6 @@ function addPokemonToList(pokemon) {
   document
     .querySelector("#dialog-window")
     .insertAdjacentHTML("beforeend", html);
+
+  document.querySelector("#dialog-window").showModal();
 }
