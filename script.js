@@ -30,14 +30,14 @@ window.addEventListener("load", initApp);
 // console.log(JSON.stringify(abra)); prints JSON formatted data on abra to be inserted in pokemon.JSON
 
 async function initApp() {
-  const abra = await getPokemon(
+  const abra = await getPokemonData(
     "https://raw.githubusercontent.com/Jasper-Nielsen/pokemon-data/main/pokemon.JSON"
   );
   addPokemonToList(abra);
   displayPokemonInGrid(abra);
 }
 
-async function getPokemon(url) {
+async function getPokemonData(url) {
   const response = await fetch(url);
   const data = await response.json();
   console.log(data);
@@ -54,9 +54,14 @@ function displayPokemonInGrid(pokemon) {
             </article>
 `
   );
+
   document
     .querySelector("#pokemon-grid article:last-child")
-    .addEventListener("click", addPokemonToList);
+    .addEventListener("click", modalWindowClicked);
+}
+
+function modalWindowClicked() {
+  document.querySelector("#dialog-window").showModal();
 }
 
 function addPokemonToList(pokemon) {
@@ -68,7 +73,7 @@ function addPokemonToList(pokemon) {
     <li> <img src=${pokemon.footprint}> </li>
     <li>Dexindex: ${pokemon.dexindex}</li>
     <li>Type: ${pokemon.type}</li>
-     li>Subtype: ${pokemon.subType}</li>
+    <li>Subtype: ${pokemon.subType}</li>
     <li>Weakness: ${pokemon.weakness}</li>
     <li>Gender: ${pokemon.gender}</li>
     <li>Weight:${pokemon.weight}</li>
@@ -87,6 +92,4 @@ function addPokemonToList(pokemon) {
   document
     .querySelector("#dialog-window")
     .insertAdjacentHTML("beforeend", html);
-
-  document.querySelector("#dialog-window").showModal();
 }
