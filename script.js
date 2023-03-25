@@ -33,7 +33,7 @@ async function initApp() {
   const abra = await getPokemonData(
     "https://raw.githubusercontent.com/Jasper-Nielsen/pokemon-data/main/pokemon.JSON"
   );
-  addPokemonToList(abra);
+
   displayPokemonInGrid(abra);
 }
 
@@ -51,13 +51,17 @@ function displayPokemonInGrid(pokemon) {
                 <img src="${pokemon.image}">
                 <h2>${pokemon.name}</h2>
                 
-            </article>
+            </article>   
 `
   );
 
   document
     .querySelector("#pokemon-grid article:last-child")
     .addEventListener("click", modalWindowClicked);
+
+  document
+    .querySelector("#dialog-window")
+    .addEventListener("click", addPokemonToList(pokemon));
 }
 
 function modalWindowClicked() {
@@ -65,29 +69,58 @@ function modalWindowClicked() {
 }
 
 function addPokemonToList(pokemon) {
-  const html = /*html*/ `
-    <img src=${pokemon.image}> 
-    <li>Name: ${pokemon.name}</li>
-    <li>Description: ${pokemon.description}</li>
-    <li>Ability: ${pokemon.ability}</li>
-    <li> <img src=${pokemon.footprint}> </li>
-    <li>Dexindex: ${pokemon.dexindex}</li>
-    <li>Type: ${pokemon.type}</li>
-    <li>Subtype: ${pokemon.subType}</li>
-    <li>Weakness: ${pokemon.weakness}</li>
-    <li>Gender: ${pokemon.gender}</li>
-    <li>Weight:${pokemon.weight}</li>
-    <li>Height: ${pokemon.height}</li>
-    <li>Generation: ${pokemon.generation}</li>
-    <li>Spilversion: ${pokemon.spilversion}</li>
-    <li>Can Evolve: ${pokemon.canEvolve}</li>
-    <li>HP: ${pokemon.statsHP}</li>
-    <li>Attack: ${pokemon.statsAttack}</li>
-    <li>Defese: ${pokemon.statsDefense}</li>
-    <li>SpecialAttack: ${pokemon.statsSpecialAttack}</li>
-    <li>SpecialDefense: ${pokemon.statsSpecialDefense}</li>
-    <li>Speed: ${pokemon.statsSpeed}</li>
-    `;
+  // const html = /*html*/ `
+  // <div id=dialog-grid>
+  // <section>
+  //   <img id="pokemon-image" src=${pokemon.image}>
+  // </section>
+  // <section>
+  //     <li id="name">Name: ${pokemon.name}</li>
+  //     <li id="description">Description: ${pokemon.description}</li>
+  //     <li id="ability">Ability: ${pokemon.ability}</li>
+  //     <li id="dexindex" >Dexindex: ${pokemon.dexindex}</li>
+  //     <li id="type"> Type: ${pokemon.type}</li>
+  //     <li id="subtype">Subtype: ${pokemon.subType}</li>
+  //     <li id="weakness">Weakness: ${pokemon.weakness}</li>
+  //     <li id="gender">Gender: ${pokemon.gender}</li>
+  //     <li id="weight">Weight:${pokemon.weight}</li>
+  //     <li id="height">Height: ${pokemon.height}</li>
+  //     <li id="generation">Generation: ${pokemon.generation}</li>
+  //     <li id="spilversion">Spilversion: ${pokemon.spilversion}</li>
+  //     <li id="can-evolve">Can Evolve: ${pokemon.canEvolve}</li>
+  //     <li id="health-points">HP: ${pokemon.statsHP}</li>
+  //     <li id="attack">Attack: ${pokemon.statsAttack}</li>
+  //     <li id="defense">Defese: ${pokemon.statsDefense}</li>
+  //     <li id="special-attack">SpecialAttack: ${pokemon.statsSpecialAttack}</li>
+  //     <li id="special-defense">SpecialDefense: ${pokemon.statsSpecialDefense}</li>
+  //     <li id="speed">Speed: ${pokemon.statsSpeed}</li>
+  // </section>
+  // <section>
+  //     <li> <img id="footprint-image" src=${pokemon.footprint}> </li>
+  // </section>
+  // </div>
+  //   `;
+  document.querySelector("#pokemon-image").src = pokemon.image;
+  document.querySelector("#name").textContent = pokemon.name;
+  document.querySelector("#description").textContent = pokemon.description;
+  document.querySelector("#ability").textContent = pokemon.ability;
+  document.querySelector("#dexindex").textContent = pokemon.dexindex;
+  document.querySelector("#type").textContent = pokemon.type;
+  document.querySelector("#subtype").textContent = pokemon.subtype;
+  document.querySelector("#weakness").textContent = pokemon.weakness;
+  document.querySelector("#gender").textContent = pokemon.gender;
+  document.querySelector("#weight").textContent = pokemon.weight;
+  document.querySelector("#height").textContent = pokemon.height;
+  document.querySelector("#generation").textContent = pokemon.generation;
+  document.querySelector("#spilversion").textContent = pokemon.name;
+  document.querySelector("#can-evolve").textContent = pokemon.name;
+  document.querySelector("#health-points").textContent = pokemon.name;
+  document.querySelector("#attack").textContent = pokemon.name;
+  document.querySelector("#defense").textContent = pokemon.name;
+  document.querySelector("#special-attack").textContent = pokemon.name;
+  document.querySelector("#special-defense").textContent = pokemon.name;
+  document.querySelector("#speed").textContent = pokemon.name;
+  document.querySelector("#footprint-image").src = pokemon.footprint;
 
   document
     .querySelector("#dialog-window")

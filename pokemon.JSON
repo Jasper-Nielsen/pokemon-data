@@ -16,8 +16,8 @@
   "canEvolve": true,
   "statsHP": 2,
   "statsAttack": 2,
-  "statsDefense": 1,
+  "statsDefence": 1,
   "statsSpecialAttack": 7,
-  "statsSpecialDefense": 4,
+  "statsSpecialDefence": 4,
   "statsSpeed": 6
 }

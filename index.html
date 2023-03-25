@@ -1,25 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Pokemon Data</title>
-</head>
-<body>
-    <ul id="pokemon-grid">
-
-
-    </ul>
+  </head>
+  <body>
+    <ul id="pokemon-grid"></ul>
 
     <dialog id="dialog-window">
-        
+         <div id=dialog-grid>
+  <section>
+    <img id="pokemon-image" src=${pokemon.image}> 
+  </section>
+  <section>
+      <li id="name">Name: </li>
+      <li id="description">Description:</li>
+      <li id="ability">Ability:</li>
+      <li id="dexindex" >Dexindex: </li>
+      <li id="type"> Type: </li>
+      <li id="subtype">Subtype: </li>
+      <li id="weakness">Weakness: </li>
+      <li id="gender">Gender: </li>
+      <li id="weight">Weight:</li>
+      <li id="height">Height: </li>
+      <li id="generation">Generation: </li>
+      <li id="spilversion">Spilversion: </li>
+      <li id="can-evolve">Can Evolve: </li>
+      <li id="health-points">HP: </li>
+      <li id="attack">Attack: </li>
+      <li id="defense">Defese: </li>
+      <li id="special-attack">SpecialAttack: </li>
+      <li id="special-defense">SpecialDefense: </li>
+      <li id="speed">Speed: </li>
+  </section>
+  <section>
+      <li> <img id="footprint-image" src=${pokemon.footprint}> </li>
+  </section>
+  </div>
+      <div id="close-button">
         <form method="dialog">
           <button>Close</button>
         </form>
+      </div>
     </dialog>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
