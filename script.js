@@ -2,39 +2,14 @@
 
 window.addEventListener("load", initApp);
 
-// const abra = {
-//   name: "Abra",
-//   description:
-//     "Abra can teleport in its sleep. Apparently the more deeply Abra sleeps, the farther its teleportations go. ",
-//   ability: "Teleport",
-//   image: `https://assets.pokemon.com/assets/cms2/img/pokedex/full/063.png`,
-//   footprint: `https://archives.bulbagarden.net/media/upload/9/9a/F0063.png`,
-//   dexindex: 63,
-//   type: "Psychic",
-//   subType: "Undefined",
-//   weakness: "Ghost, Dark, Bug",
-//   gender: "male",
-//   weight: 19.5,
-//   height: 0.9,
-//   generation: 1,
-//   spilversion: "1",
-//   canEvolve: true,
-//   statsHP: 2,
-//   statsAttack: 2,
-//   statsDefense: 1,
-//   statsSpecialAttack: 7,
-//   statsSpecialDefense: 4,
-//   statsSpeed: 6,
-// };
 
-// console.log(JSON.stringify(abra)); prints JSON formatted data on abra to be inserted in pokemon.JSON
 
 async function initApp() {
-  const abra = await getPokemonData(
+  const pokemons = await [getPokemonData(
     "https://raw.githubusercontent.com/Jasper-Nielsen/pokemon-data/main/pokemon.JSON"
-  );
+  )];
 
-  displayPokemonInGrid(abra);
+  pokemons.foreach(displayPokemonInGrid()); 
 }
 
 async function getPokemonData(url) {
