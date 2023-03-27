@@ -8,44 +8,54 @@
     <title>Pokemon Data</title>
   </head>
   <body>
-    <ul id="pokemon-grid"></ul>
+    <header>
+      <h1>Pokemons</h1>
+    </header>
+    <main>
+      <dialog id="dialog-window">
+        <div id="dialog-grid">
+          <section>
+            <div id="dialog-image-container">
+              <img id="dialog-image" />
+            </div>
+          </section>
+          <section>
+            <li id="name">Name:</li>
+            <li id="description">Description:</li>
+            <li id="ability">Ability:</li>
+            <li id="dexindex">Dexindex:</li>
+            <li id="type">Type:</li>
+            <li id="subtype">Subtype:</li>
+            <li id="weakness">Weakness:</li>
+            <li id="gender">Gender:</li>
+            <li id="weight">Weight:</li>
+            <li id="height">Height:</li>
+            <li id="generation">Generation:</li>
+            <li id="spilversion">Spilversion:</li>
+            <li id="can-evolve">Can Evolve:</li>
+            <li id="health-points">HP:</li>
+            <li id="attack">Attack:</li>
+            <li id="defense">Defese:</li>
+            <li id="special-attack">SpecialAttack:</li>
+            <li id="special-defense">SpecialDefense:</li>
+            <li id="speed">Speed:</li>
+            <p></p>
+            <li id="footprint-text"></li>
+            <img id="footprint-image" />
+          </section>
+        </div>
 
-    <dialog id="dialog-window">
-         <div id=dialog-grid>
-  <section>
-    <img id="pokemon-image" src=${pokemon.image}> 
-  </section>
-  <section>
-      <li id="name">Name: </li>
-      <li id="description">Description:</li>
-      <li id="ability">Ability:</li>
-      <li id="dexindex" >Dexindex: </li>
-      <li id="type"> Type: </li>
-      <li id="subtype">Subtype: </li>
-      <li id="weakness">Weakness: </li>
-      <li id="gender">Gender: </li>
-      <li id="weight">Weight:</li>
-      <li id="height">Height: </li>
-      <li id="generation">Generation: </li>
-      <li id="spilversion">Spilversion: </li>
-      <li id="can-evolve">Can Evolve: </li>
-      <li id="health-points">HP: </li>
-      <li id="attack">Attack: </li>
-      <li id="defense">Defese: </li>
-      <li id="special-attack">SpecialAttack: </li>
-      <li id="special-defense">SpecialDefense: </li>
-      <li id="speed">Speed: </li>
-  </section>
-  <section>
-      <li> <img id="footprint-image" src=${pokemon.footprint}> </li>
-  </section>
-  </div>
-      <div id="close-button">
-        <form method="dialog">
-          <button>Close</button>
+        <form method="dialog" id="close-buttton">
+          <button class="close-buttton">Close</button>
         </form>
-      </div>
-    </dialog>
+      </dialog>
+
+      <section id="pokemon-grid" class="grid-container"></section>
+    </main>
+
+    <footer>
+      <p>Pokemon grid by Jasper Nielsen</p>
+    </footer>
 
     <script src="script.js"></script>
   </body>

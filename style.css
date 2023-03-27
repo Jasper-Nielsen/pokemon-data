@@ -1,5 +1,64 @@
 body {
+  background-color: antiquewhite;
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0;
 }
+
+header h1 {
+  font-size: 2.4rem;
+  text-align: center;
+  background-color: rgb(232, 232, 114);
+  padding: 1em;
+  margin: 0;
+  z-index: 9999;
+}
+
+footer {
+  margin-top: 5rem;
+  text-align: center;
+  background-color: lightblue;
+  padding: 1rem;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: 9999;
+}
+
+h2 {
+  margin: 0;
+}
+.grid-container {
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  border-color: purple;
+  border-style: solid;
+  
+  background-color: white;
+}
+
+/* @media (min-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 990px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 1200px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 1500px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+} */
 
 #dialog-grid {
   display: grid;
@@ -7,12 +66,44 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-
-#pokemon-image {
+dialog{
+    width: 50rem;
 }
 
-#footprint-image {
+h2{
+    text-align: center;
+    font-size: 3rem;
 }
 
-#close-button {
+
+
+#grid-image-container {
+  text-align: center;
+  /* when changing sise the box expands */
 }
+
+#dialog-image {
+  height: 70%;
+  width: 70%;
+}
+
+#footprint-image{
+    margin-top: -0.8rem;
+    margin-left: 5rem;
+    position: absolute;
+}
+
+
+
+
+
+/* BACKGROUNDS */
+
+.psychic-background{
+    background-color: purple;
+}
+
+.blue-background{
+    background-color: blue;
+}
+
