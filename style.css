@@ -29,34 +29,37 @@ h2 {
   margin: 0;
 }
 .grid-container {
-  margin: 1rem;
   display: grid;
-  grid-template-columns: 1fr;
-  border-color: purple;
-  border-style: solid;
+  grid-template-columns: 1fr 1fr;
   
   background-color: white;
 }
 
-@media (min-width: 600px) {
-  .grid-container {
-    grid-template-columns: 1fr 1fr;
-  }
+#grid-item{
+    margin: 1rem;
+  
+  border-color: purple;
+  border-style: solid;
 }
-
-@media (min-width: 990px) {
+@media (min-width: 300px) {
   .grid-container {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
-@media (min-width: 1200px) {
+
+@media (min-width: 600px) {
   .grid-container {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
-@media (min-width: 1500px) {
+@media (min-width: 900px) {
   .grid-container {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 1200px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
 }
 
@@ -78,7 +81,9 @@ h2{
 
 
 #grid-image-container {
-  text-align: center;
+    
+
+
   /* when changing sise the box expands */
 }
 

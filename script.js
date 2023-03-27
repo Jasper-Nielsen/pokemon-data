@@ -62,8 +62,8 @@ function showPokemonModal(pokemon) {
 
   document.querySelector("#gender").textContent = `Gender: ${pokemon.gender}`;
 
-  document.querySelector("#weight").textContent = `Weight: ${pokemon.weight}kg`;
-  document.querySelector("#height").textContent = `Height: ${pokemon.height}cm`;
+  document.querySelector("#weight").textContent = `Weight: ${pokemon.weight} kg`;
+  document.querySelector("#height").textContent = `Height: ${pokemon.height} cm`;
   document.querySelector(
     "#generation"
   ).textContent = `Generation: ${pokemon.generation}`;
