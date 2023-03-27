@@ -104,7 +104,7 @@ function showPokemonModal(pokemon) {
   document.querySelector("#footprint-text").textContent = `Footprint: `;
   document.querySelector("#footprint-image").src = pokemon.footprint;
 
-  applyBackgroundBasedOnType(pokemon);
+  // applyBackgroundBasedOnType(pokemon);
   document.querySelector("#dialog-window").showModal();
   
  
@@ -128,30 +128,30 @@ function canEvolve(pokemon) {
   return status;
 }
 
-function applyBackgroundBasedOnType(pokemon) {
+// function applyBackgroundBasedOnType(pokemon) {
 
-  const type= pokemon.type.toLowerCase();
+//   const type= pokemon.type.toLowerCase();
 
-  if (type === `psychic`) {
-    document.querySelector("#dialog-window").classList.add("psychic");
-  } else if (type === `fire`) {
-    document.querySelector("#dialog-window").classList.add("fire");
-  } else if (type=== `normal`) document.querySelector("#dialog-window").classList.add("default");
+//   if (type === `psychic`) {
+//     document.querySelector("#dialog-window").classList.add("psychic");
+//   } else if (type === `fire`) {
+//     document.querySelector("#dialog-window").classList.add("fire");
+//   } else if (type=== `normal`) document.querySelector("#dialog-window").classList.add("default");
  
  
-  /*
-     Normal, Fire, 
-     Water, Grass, Flying, Fighting, Poison, Electric, Ground, Rock, Psychic, Ice, Bug, Ghost, Steel, Dragon, Dark and Fairy */
-}
+//   /*
+//      Normal, Fire, 
+//      Water, Grass, Flying, Fighting, Poison, Electric, Ground, Rock, Psychic, Ice, Bug, Ghost, Steel, Dragon, Dark and Fairy */
+// }
 
 
 
-function resetBackground(){
-  document.querySelector("dialog-window").classList.remove("default", "fire", "psychic");
-  console.log("background removed");
+// function resetBackground(){
+//   document.querySelector("dialog-window").classList.remove("default", "fire", "psychic");
+//   console.log("background removed");
   
 
 
  
-}
+// }
 
