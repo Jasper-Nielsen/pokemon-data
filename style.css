@@ -38,7 +38,7 @@ h2 {
   background-color: white;
 }
 
-/* @media (min-width: 600px) {
+@media (min-width: 600px) {
   .grid-container {
     grid-template-columns: 1fr 1fr;
   }
@@ -58,7 +58,7 @@ h2 {
   .grid-container {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
-} */
+}
 
 #dialog-grid {
   display: grid;
