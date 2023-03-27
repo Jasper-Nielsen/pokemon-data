@@ -20,10 +20,10 @@ async function getPokemonData(url) {
 function displayPokemonInGrid(pokemon) {
   document.querySelector("#pokemon-grid").insertAdjacentHTML(
     "beforeend",
-    /*html*/ ` <article class="grid-item">
-              <div id="grid-image-container">
-                <img id="grid-image" src="${pokemon.image}">
-              </div>
+    /*html*/ ` <article class=grid-item>
+              
+                <img src="${pokemon.image}">
+              
                 <h2>${pokemon.name}</h2>
                 
             </article>   
@@ -62,8 +62,12 @@ function showPokemonModal(pokemon) {
 
   document.querySelector("#gender").textContent = `Gender: ${pokemon.gender}`;
 
-  document.querySelector("#weight").textContent = `Weight: ${pokemon.weight} kg`;
-  document.querySelector("#height").textContent = `Height: ${pokemon.height} cm`;
+  document.querySelector(
+    "#weight"
+  ).textContent = `Weight: ${pokemon.weight} kg`;
+  document.querySelector(
+    "#height"
+  ).textContent = `Height: ${pokemon.height} cm`;
   document.querySelector(
     "#generation"
   ).textContent = `Generation: ${pokemon.generation}`;
