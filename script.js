@@ -119,10 +119,9 @@ function canEvolve(pokemon) {
 }
 
 function applyBackgroundBasedOnType(pokemon) {
-  document
-    .querySelector("#dialog-window")
-    .classList.remove("default", "fire", "psychic");
+  resetBackground();
 
+  //takes into account first letter capital
   const type = pokemon.type.toLowerCase();
 
   if (type === `psychic`) {
@@ -139,8 +138,9 @@ function applyBackgroundBasedOnType(pokemon) {
      Water, Grass, Flying, Fighting, Poison, Electric, Ground, Rock, Psychic, Ice, Bug, Ghost, Steel, Dragon, Dark and Fairy */
 }
 
-// function resetBackground(){
-//   document.querySelector("dialog-window").classList.remove("default", "fire", "psychic");
-//   console.log("background removed");
-
-// }
+function resetBackground() {
+  //resets background so the former chosen won't stick
+  document
+    .querySelector("#dialog-window")
+    .classList.remove("default", "fire", "psychic");
+}
