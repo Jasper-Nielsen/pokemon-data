@@ -8,6 +8,7 @@ async function initApp() {
   );
 
   pokemons.forEach(displayPokemonInGrid);
+  
 }
 
 async function getPokemonData(url) {
@@ -130,8 +131,12 @@ function applyBackgroundBasedOnType(pokemon) {
   if (type === `fire`) {
     document.querySelector("#dialog-window").classList.add("fire");
   }
-  if (type === `normal`)
+  if (type === `normal`){
     document.querySelector("#dialog-window").classList.add("default");
+    }
+    if (type === `fighting`) {
+      document.querySelector("#dialog-window").classList.add("fighting");
+    }
 
   /*
      Normal, Fire,
@@ -142,5 +147,6 @@ function resetBackground() {
   //resets background so the former chosen won't stick
   document
     .querySelector("#dialog-window")
-    .classList.remove("default", "fire", "psychic");
+    .classList.remove("default", "fire", "psychic", "fighting");
+    
 }
