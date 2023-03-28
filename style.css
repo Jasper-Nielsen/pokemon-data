@@ -41,8 +41,8 @@ p {
   object-fit: contain;
 }
 
-.info{
-  font-size:1.5rem;
+.info {
+  font-size: 1.5rem;
 }
 /* Sets item in the grid background and fonrt color according to type */
 .grid-item {
@@ -147,9 +147,8 @@ p {
 #dialog-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  
   column-gap: 1rem;
-  animation: fade-in 500ms;
+  animation: fade-in 1000ms;
 }
 
 #dialog-image {
@@ -169,8 +168,8 @@ h2 {
   margin-top: -1.3rem;
   margin-left: 8.5rem;
   position: absolute;
-  max-width: 10%;
-  max-height: 10%;
+  max-width: 50px;
+  max-height: 50px;
 }
 
 form {
