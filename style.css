@@ -69,6 +69,51 @@ p{
     background-color: #00ba00;
     color:#3b61b2;
 }
+
+.grid-item.bug{
+    background-color: #00ba00;
+    color:#3b61b2;
+}
+
+.grid-item.normal{
+    background-color: #00ba00;
+    color:#3b61b2;
+}
+
+.grid-item.ground{
+    background-color: #00ba00;
+    color:#3b61b2;
+}
+
+.grid-item.sun{
+    background-color: #00ba00;
+    color:#3b61b2;
+}
+
+.grid-item.dark{
+    background-color: #00ba00;
+    color:#3b61b2;
+}
+
+.grid-item.electric{
+    background-color: #00ba00;
+    color:#3b61b2;
+}
+
+.grid-item.fairy{
+    background-color: #da43e8;
+    color:#1e2d4e;
+}
+
+.grid-item.dragon{
+    background-color: #4f066a;
+    color:#3b61b2;
+}
+
+.grid-item.ghost{
+    background-color: #cee6ce;
+    color:#3b61b2;
+}
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
