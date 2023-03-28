@@ -46,10 +46,29 @@ p{
 }
 
 .grid-item.psychic{
-    background-color: darkviolet;
+    background-color: #6a0dad;
     color:gold;
 }
 
+.grid-item.fire{
+    background-color: #ba5200;
+    color:gold;
+}
+
+.grid-item.water{
+    background-color: #0040ba;
+    color:#ba5200;
+}
+
+.grid-item.fighting{
+    background-color: #bc0936;
+    color:#3b61b2;
+}
+
+.grid-item.grass{
+    background-color: #00ba00;
+    color:#3b61b2;
+}
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -116,14 +135,28 @@ form {
 /* styling depending on type */
 
 dialog[data-theme="psychic"]{
-    background-color: darkviolet;
+    background-color: #6a0dad;
     color:gold;
 }
 
 dialog[data-theme="psychic"] button{
-    background-color: rgb(57, 212, 171);
+    background-color: rgb(54, 58, 57);
+    color:white;
     
 }
+
+dialog[data-theme="fire"]{
+    background-color: #ba5200;
+    color:rgb(160, 237, 109);
+}
+
+dialog[data-theme="fire"] button{
+    background-color: rgb(57, 212, 171);
+    
+    
+}
+
+
 
 
 @keyframes fade-in {
