@@ -11,14 +11,17 @@ async function initApp() {
 }
 
 async function getPokemonData(url) {
+  //await fetch(url) and respond
   const response = await fetch(url);
+  // await respons.json() that is our data
   const data = await response.json();
-  sort(data);
+  // before we return data we sort it
+  sortPokemons(data);
   return data;
 }
 
-function sort(items) {
-  items.sort((a, b) => {
+function sortPokemons(items) {
+  items.sort(function (a, b) {
     const nameA = a.name.toUpperCase(); // ignore upper and lowercase
     const nameB = b.name.toUpperCase(); // ignore upper and lowercase
     if (nameA < nameB) {
