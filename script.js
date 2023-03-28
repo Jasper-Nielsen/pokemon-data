@@ -8,14 +8,29 @@ async function initApp() {
   );
 
   pokemons.forEach(displayPokemonInGrid);
-  
 }
 
 async function getPokemonData(url) {
   const response = await fetch(url);
   const data = await response.json();
-
+  sort(data);
   return data;
+}
+
+function sort(items) {
+  items.sort((a, b) => {
+    const nameA = a.name.toUpperCase(); // ignore upper and lowercase
+    const nameB = b.name.toUpperCase(); // ignore upper and lowercase
+    if (nameA < nameB) {
+      return -1;
+    }
+    if (nameA > nameB) {
+      return 1;
+    }
+
+    // names must be equal
+    return 0;
+  });
 }
 
 function displayPokemonInGrid(pokemon) {
@@ -131,12 +146,12 @@ function applyBackgroundBasedOnType(pokemon) {
   if (type === `fire`) {
     document.querySelector("#dialog-window").classList.add("fire");
   }
-  if (type === `normal`){
+  if (type === `normal`) {
     document.querySelector("#dialog-window").classList.add("default");
-    }
-    if (type === `fighting`) {
-      document.querySelector("#dialog-window").classList.add("fighting");
-    }
+  }
+  if (type === `fighting`) {
+    document.querySelector("#dialog-window").classList.add("fighting");
+  }
 
   /*
      Normal, Fire,
@@ -148,5 +163,4 @@ function resetBackground() {
   document
     .querySelector("#dialog-window")
     .classList.remove("default", "fire", "psychic", "fighting");
-    
 }
