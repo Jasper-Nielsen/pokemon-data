@@ -65,7 +65,7 @@ function showPokemonModal(pokemon) {
   document.querySelector("#name").textContent = `Name: ${pokemon.name}`;
   document.querySelector(
     "#description"
-  ).textContent = `Desription: ${pokemon.description}`;
+  ).textContent = `Description: ${pokemon.description}`;
   document.querySelector(
     "#ability"
   ).textContent = `Abilitíes: ${pokemon.ability}`;
@@ -121,8 +121,8 @@ function showPokemonModal(pokemon) {
 
   // applyBackgroundBasedOnType(pokemon);
 
-  const dialog= document.querySelector("dialog");
-  //sets the background on 
+  const dialog = document.querySelector("dialog");
+  //sets the background on
   dialog.setAttribute("data-theme", pokemon.type.toLowerCase());
 
   document.querySelector("#dialog-window").showModal();
@@ -143,12 +143,9 @@ function canEvolve(pokemon) {
   return status;
 }
 
-
-
-  /*
+/*
      Normal, Fire,
      Water, Grass, Flying, Fighting, Poison, Electric, Ground, Rock, Psychic, Ice, Bug, Ghost, Steel, Dragon, Dark and Fairy */
-
 
 function resetBackground() {
   //resets background so the former chosen won't stick
