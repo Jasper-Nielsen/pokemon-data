@@ -41,6 +41,7 @@ p {
   object-fit: contain;
 }
 
+/* Sets item in the grid background and fonrt color according to type */
 .grid-item {
   background-color: bisque;
 }
@@ -50,7 +51,7 @@ p {
   color: #3b61b2;
 }
 .grid-item.dark {
-  background-color: #00ba00;
+  background-color: #839983;
   color: #3b61b2;
 }
 
@@ -58,21 +59,19 @@ p {
   background-color: #69586f;
   color: #b4274f;
 }
-
+.grid-item.electric {
+  background-color: #f3eb09;
+  color: #3b61b2;
+}
+.grid-item.fairy {
+  background-color: #da43e8;
+  color: #1e2d4e;
+}
 .grid-item.fighting {
   background-color: #bc0936;
   color: #03153d;
 }
 
-.grid-item.electric {
-  background-color: #f3eb09;
-  color: #3b61b2;
-}
-
-.grid-item.fairy {
-  background-color: #da43e8;
-  color: #1e2d4e;
-}
 .grid-item.fire {
   background-color: #ba5200;
   color: gold;
@@ -102,15 +101,13 @@ p {
   background-color: #6a0dad;
   color: gold;
 }
-
-.grid-item.water {
-  background-color: #0040ba;
-  color: #ba5200;
-}
-
 .grid-item.sun {
   background-color: #e7e00f;
   color: #3b61b2;
+}
+.grid-item.water {
+  background-color: #0040ba;
+  color: #ba5200;
 }
 
 .grid-container {
@@ -177,6 +174,110 @@ form {
   text-align: center;
 }
 /* styling depending on type */
+/* skulle virkeligt have sat farver som css variabler i stedet ville have gjort arbejdet SÅ meget nemmere */
+
+dialog[data-theme="bug"] {
+  background-color: #579257;
+  color: rgb(160, 237, 109);
+}
+
+dialog[data-theme="bug"] button {
+  background-color: rgb(57, 91, 212);
+  color: brown;
+}
+
+dialog[data-theme="dark"] {
+  background-color: #839983;
+  color: rgb(14, 28, 38);
+}
+
+dialog[data-theme="dark"] button {
+  background-color: rgb(9, 49, 190);
+  color: white;
+}
+
+dialog[data-theme="dragon"] {
+  background-color: #69586f;
+  color: #b4274f;
+}
+
+dialog[data-theme="dragon"] button {
+  background-color: rgb(9, 49, 190);
+  color: white;
+}
+
+dialog[data-theme="electric"] {
+  background-color: #f3eb09;
+  color: #3b61b2;
+}
+
+dialog[data-theme="electric"] button {
+  background-color: rgb(9, 49, 190);
+  color: white;
+}
+
+dialog[data-theme="fairy"] {
+  background-color: #da43e8;
+  color: #1e2d4e;
+}
+
+dialog[data-theme="fairy"] button {
+  background-color: rgb(57, 212, 171);
+}
+
+dialog[data-theme="fighting"] {
+  background-color: #bc0936;
+  color: #03153d;
+}
+
+dialog[data-theme="fighting"] button {
+  background-color: rgb(57, 212, 171);
+}
+
+dialog[data-theme="fire"] {
+  background-color: #ba5200;
+  color: rgb(160, 237, 109);
+}
+
+dialog[data-theme="fire"] button {
+  background-color: rgb(57, 212, 171);
+}
+
+dialog[data-theme="ghost"] {
+  background-color: #cee6ce;
+  color: #3b61b2;
+}
+
+dialog[data-theme="ghost"] button {
+  background-color: rgb(57, 212, 171);
+}
+
+dialog[data-theme="grass"] {
+  background-color: #00ba00;
+  color: #0f234e;
+}
+
+dialog[data-theme="grass"] button {
+  background-color: rgb(57, 212, 171);
+}
+
+dialog[data-theme="ground"] {
+  background-color: beige;
+  color: #bc8627;
+}
+
+dialog[data-theme="ground"] button {
+  background-color: rgb(57, 212, 171);
+}
+
+dialog[data-theme="normal"] {
+  background-color: grey;
+  color: #b2ae3b;
+}
+
+dialog[data-theme="normal"] button {
+  background-color: rgb(57, 212, 171);
+}
 
 dialog[data-theme="psychic"] {
   background-color: #6a0dad;
@@ -188,13 +289,28 @@ dialog[data-theme="psychic"] button {
   color: white;
 }
 
-dialog[data-theme="fire"] {
-  background-color: #ba5200;
-  color: rgb(160, 237, 109);
+dialog[data-theme="sun"] {
+  background-color: #e7e00f;
+  color: #3b61b2;
 }
 
-dialog[data-theme="fire"] button {
+dialog[data-theme="sun"] button {
+  background-color: rgb(54, 58, 57);
+  color: white;
+}
+
+dialog[data-theme="water"] {
+  background-color: #0040ba;
+  color: #ba5200;
+}
+
+dialog[data-theme="water"] button {
   background-color: rgb(57, 212, 171);
+}
+
+.grid-item.sun {
+  background-color: #e7e00f;
+  color: #3b61b2;
 }
 
 @keyframes fade-in {
