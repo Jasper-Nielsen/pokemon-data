@@ -489,7 +489,7 @@
     "image": "https://archives.bulbagarden.net/media/upload/5/55/0012Butterfree.png",
     "footprint": "https://archives.bulbagarden.net/media/upload/a/ac/F0012.png",
     "dexindex": "#0012",
-    "type": "Bug/Flying",
+    "type": "Bug",
     "subtype": "Bug",
     "weaknesses": "Fire, Electric, Ice, Rock, Flying",
     "gender": "male",
