@@ -23,6 +23,9 @@ h2 {
   margin: 0;
 }
 
+p{
+    text-align: center;
+}
 .grid-container article {
   border-style: solid;
   border-color: rgb(78, 72, 128);
@@ -41,6 +44,12 @@ h2 {
 .grid-item {
   background-color: bisque;
 }
+
+.grid-item.psychic{
+    background-color: darkviolet;
+    color:gold;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -104,31 +113,18 @@ form {
   padding-top: 1rem;
   text-align: center;
 }
-/* BACKGROUNDS */
+/* styling depending on type */
 
-.psychic {
-  background-color: purple;
+dialog[data-theme="psychic"]{
+    background-color: darkviolet;
+    color:gold;
 }
 
-.default {
-  background-color: cornsilk;
+dialog[data-theme="psychic"] button{
+    background-color: rgb(57, 212, 171);
+    
 }
 
-.normal {
-  background-color: beige;
-}
-
-.fire {
-  background: radial-gradient(
-    circle,
-    rgba(238, 174, 202, 1) 0%,
-    rgba(213, 61, 34, 1) 100%
-  );
-}
-
-.fighting {
-    background-color: red;
-}
 
 @keyframes fade-in {
   0% {

@@ -39,11 +39,12 @@ function sortPokemons(items) {
 function displayPokemonInGrid(pokemon) {
   document.querySelector("#pokemon-grid").insertAdjacentHTML(
     "beforeend",
-    /*html*/ ` <article class=grid-item>
-              
+    /*html*/ ` <article class="grid-item ${pokemon.type.toLowerCase()}">
+              <h2>${pokemon.name}</h2>
                 <img src="${pokemon.image}">
               
-                <h2>${pokemon.name}</h2>
+                
+                <p>${pokemon.type}</p>
                 
             </article>   
 `
@@ -118,7 +119,12 @@ function showPokemonModal(pokemon) {
   document.querySelector("#footprint-text").textContent = `Footprint: `;
   document.querySelector("#footprint-image").src = pokemon.footprint;
 
-  applyBackgroundBasedOnType(pokemon);
+  // applyBackgroundBasedOnType(pokemon);
+
+  const dialog= document.querySelector("dialog");
+  //sets the background on 
+  dialog.setAttribute("data-theme", pokemon.type.toLowerCase());
+
   document.querySelector("#dialog-window").showModal();
 }
 
@@ -137,29 +143,12 @@ function canEvolve(pokemon) {
   return status;
 }
 
-function applyBackgroundBasedOnType(pokemon) {
-  resetBackground();
 
-  //takes into account first letter capital
-  const type = pokemon.type.toLowerCase();
-
-  if (type === `psychic`) {
-    document.querySelector("#dialog-window").classList.add("psychic");
-  }
-  if (type === `fire`) {
-    document.querySelector("#dialog-window").classList.add("fire");
-  }
-  if (type === `normal`) {
-    document.querySelector("#dialog-window").classList.add("default");
-  }
-  if (type === `fighting`) {
-    document.querySelector("#dialog-window").classList.add("fighting");
-  }
 
   /*
      Normal, Fire,
      Water, Grass, Flying, Fighting, Poison, Electric, Ground, Rock, Psychic, Ice, Bug, Ghost, Steel, Dragon, Dark and Fairy */
-}
+
 
 function resetBackground() {
   //resets background so the former chosen won't stick
