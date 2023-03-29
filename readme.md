@@ -1,5 +1,5 @@
-### My Pokemon grid App
-This program was made as a mandatory assignment during my first semester studying datamatiker at KEA - Copenhagen School of Design and Technology.
+                    ### My Pokemon grid App
+This program was made as a mandatory assignment during my first semester studying datamatiker(computer science) at KEA - Copenhagen School of Design and Technology.
 
 This program takes dataobjects from a JSON file containing 27 pokemon objects, and displays them in a grid sorting them according to their name. The type of the pokemon dictates each grid items layout.
 
@@ -14,7 +14,10 @@ Also a thanks to our teachers for making programming fun.
 
 
 
+best regards
 
+Jasper Nielsen
+29th of may 2023
 
 
 
