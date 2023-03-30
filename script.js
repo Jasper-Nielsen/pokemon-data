@@ -4,7 +4,7 @@ window.addEventListener("load", initApp);
 
 async function initApp() {
   const pokemons = await getPokemonData(
-    "https://raw.githubusercontent.com/Jasper-Nielsen/pokemon-data/main/pokemons.JSON"
+    "https://cederdorff.github.io/dat-js/05-data/pokemons.json "
   );
 
   pokemons.forEach(displayPokemonInGrid);
